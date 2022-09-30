@@ -36,9 +36,6 @@ jobs:
     # # Checks that all Terraform configuration files adhere to a canonical format
     # - name: Terraform Format
     #   run: terraform fmt -check
-    - name: aws profile 
-      run: aws sts get-caller-identity --query "815415113964" --output text
-
     # Generates an execution plan for tfcode
     - name: Terraform Plan
       run: terraform plan -input=false --var-file=tf-vars/dev.tfvars
