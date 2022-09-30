@@ -26,7 +26,6 @@ jobs:
 
     # Initialize a new or existing Terraform working directory by creating initial files
     - name: Terraform Init
-      uses: hashicorp/setup-terraform@v1
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         TF_ACTION_WORKING_DIR: 'tf-demo'
@@ -43,7 +42,6 @@ jobs:
       run: terraform plan -input=false --var-file=tf-vars/dev.tfvars
     # Applies the changes using tf code
     - name: Terraform Apply
-      uses: hashicorp/setup-terraform@v1
       env:      
         GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         TF_ACTION_WORKING_DIR: 'tf-demo'
