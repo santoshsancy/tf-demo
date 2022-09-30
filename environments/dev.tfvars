@@ -1,5 +1,5 @@
 region              =       "ap-southeast-1"
-ami_id              =       "ami-830c94e3"
+ami_id              =       "ami-01216e7612243e0ef"
 instance_type       =       "t2.micro"
 access_key          =       "AKIA33WUHHDWLRL2GJGT"
 secret_key          =       "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"
