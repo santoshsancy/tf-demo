@@ -38,7 +38,7 @@ jobs:
     #   run: terraform fmt -check
     # Generates an execution plan for tfcode
     - name: Terraform Plan
-      run: terraform plan -input=false --var-file=tf-vars/dev.tfvars
+      run: terraform plan --var-file=tf-vars/dev.tfvars
     # Applies the changes using tf code
     - name: Terraform Apply
       env:      
@@ -46,4 +46,4 @@ jobs:
         TF_ACTION_WORKING_DIR: 'tf-demo'
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: terraform apply -auto-approve -input=false --var-file=tf-vars/dev.tfvars
+      run: terraform apply --var-file=tf-vars/dev.tfvars -auto-approve 
