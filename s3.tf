@@ -1,10 +1,10 @@
 resource "aws_s3_bucket" "onebucket" {
-   bucket = "testing-s3-with-terraform-san"
+   bucket = "${var.s3_bucket_name}"
    acl = "private"
    versioning {
       enabled = true
    }
    tags = {
-     Environment = "Test"
+     Environment = "dev"
    }
 }
