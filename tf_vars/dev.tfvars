@@ -1,0 +1,6 @@
+region              =       "ap-southeast-1"
+ami_id              =       "ami-830c94e3"
+instance_type       =       "t2.micro"
+access_key          =       "AKIA33WUHHDWLRL2GJGT"
+secret_key          =       "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"
+bucket_name         =       "tfstate-demo-san"   
