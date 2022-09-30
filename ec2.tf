@@ -1,8 +1,8 @@
-resource "aws_instance" "app_server" {
-  ami           = "${var.ami_id}"
-  instance_type = "${var.instance_type}"
+# resource "aws_instance" "app_server" {
+#   ami           = "${var.ami_id}"
+#   instance_type = "${var.instance_type}"
 
-  tags = {
-    Name = "demo"
-  }
-}
+#   tags = {
+#     Name = "demo"
+#   }
+# }
