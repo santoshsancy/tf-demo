@@ -36,6 +36,8 @@ jobs:
         TF_ACTION_WORKING_DIR: 'tf-demo'
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        TF_VAR_access_key:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+        TF_VAR_secret_key:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: terraform init --var-file=tf-vars/dev.tfvars
 
     # # Checks that all Terraform configuration files adhere to a canonical format
@@ -47,7 +49,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         TF_ACTION_WORKING_DIR: 'tf-demo'
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}    
+        AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        TF_VAR_access_key:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+        TF_VAR_secret_key:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}           
       run: terraform plan --var-file=environments/dev.tfvars
     # Applies the changes using tf code
     - name: Terraform Apply
@@ -56,4 +60,6 @@ jobs:
         TF_ACTION_WORKING_DIR: 'tf-demo'
         AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        TF_VAR_access_key:  ${{ secrets.AWS_ACCESS_KEY_ID }}
+        TF_VAR_secret_key:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}        
       run: terraform apply --var-file=environments/dev.tfvars -auto-approve 
