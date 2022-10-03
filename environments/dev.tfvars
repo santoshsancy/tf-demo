@@ -1,6 +1,6 @@
 region              =       "ap-southeast-1"
 ami_id              =       "ami-01216e7612243e0ef"
 instance_type       =       "t2.micro"
-access_key          =       "AKIA33WUHHDWLRL2GJGT"
-secret_key          =       "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"
+access_key          =       "AKIA33WUHHDWPPGVX4WZ"
+secret_key          =       "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"
 s3_bucket_name      =       "testing-s3-with-terraform-san"   
